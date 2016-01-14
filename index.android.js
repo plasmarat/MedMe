@@ -10,9 +10,6 @@ import * as auth1 from './src/auth1.js'
 var React = require('react-native');
 var {
   AppRegistry,
-  StyleSheet,
-  Text,
-  View,
 } = React;
 
 

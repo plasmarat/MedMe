@@ -1,10 +1,12 @@
 import * as cnst from './const.js'
+
 var React = require('react-native');
 var {
   AppRegistry,
   StyleSheet,
   Text,
   View,
+  TextInput
 } = React;
 
 export var auth1 = React.createClass({
@@ -17,6 +19,13 @@ export var auth1 = React.createClass({
         <Text style={styles.request_title}>
           Пожалуйста, введите номер телефона
         </Text>
+        <TextInput style={styles.input}
+          keyboardType={'numeric'}
+          defaultValue = {'                   +7'} //19 пробелов                                  
+          maxLength = {31}
+          //onChangeText={(text) => this.setState({text})}
+          //value={this.state.text}
+        />
       </View>
     );
   }
@@ -41,6 +50,15 @@ var styles = StyleSheet.create({
     fontFamily: 'SFUIText-Light',
     fontSize: 16,
     margin: 28.5
+  },
+  input: {
+    alignSelf: 'center',
+    height: 42,
+    width: 280,
+    backgroundColor: '#FFFFFF',
+    margin: 26.5,
+    fontSize: 16,
+
   }
 
   /*
