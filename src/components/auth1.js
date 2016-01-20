@@ -9,7 +9,7 @@ var {
   TextInput
 } = React;
 
-export var auth1 = React.createClass({
+var auth1 = React.createClass({
   render: function() {
     return (
       <View style={styles.background}>
@@ -23,6 +23,7 @@ export var auth1 = React.createClass({
           keyboardType={'numeric'}
           defaultValue = {'                   +7'} //19 пробелов                                  
           maxLength = {31}
+          onChange={this.props.navigator.push({id: 'auth2'})}
           //onChangeText={(text) => this.setState({text})}
           //value={this.state.text}
         />
@@ -79,3 +80,6 @@ var styles = StyleSheet.create({
     marginBottom: 5,
   },*/
 });
+
+
+export default auth1;
